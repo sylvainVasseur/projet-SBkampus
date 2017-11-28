@@ -6,6 +6,7 @@ page-home {
     text-align: center;
     background-color: #778899;
     color: #FFFAF0;
+    margin-bottom: 10px;
    
 }
 .card-header{
@@ -13,5 +14,11 @@ page-home {
     height: 12px;
     width: 12px;
     }
+}
+
+.card-content{
+     p{
+         margin-bottom: 5px;
+     }
 }
 }
