@@ -1,11 +1,12 @@
 page-home {
 
 .card-header{
-    font-size: 1.0em;
+    font-size: 1.3em;
     font-weight: bold;
     text-align: center;
     background-color: #778899;
     color: #FFFAF0;
+    margin-bottom: 10px;
    
 }
 .card-header{
@@ -13,5 +14,11 @@ page-home {
     height: 12px;
     width: 12px;
     }
+}
+
+.card-content{
+     p{
+         margin-bottom: 5px;
+     }
 }
 }
