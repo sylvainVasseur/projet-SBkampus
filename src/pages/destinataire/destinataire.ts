@@ -1,25 +1,15 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the DestinatairePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
-@IonicPage()
 @Component({
   selector: 'page-destinataire',
   templateUrl: 'destinataire.html',
 })
 export class DestinatairePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController) {
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DestinatairePage');
   }
 
 }
