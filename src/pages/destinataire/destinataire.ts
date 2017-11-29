@@ -34,7 +34,6 @@ export class DestinatairePage {
       }
     ];
 
-
   }
 
   //Toast pour la prochaine page
