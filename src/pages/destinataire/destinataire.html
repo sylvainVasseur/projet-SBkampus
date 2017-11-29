@@ -15,7 +15,20 @@
       Destinataire:
     </ion-card-header>
     <ion-card-content>
-    <p>List déroulante</p> 
+
+         <ion-item>
+          <ion-label>Destinataire</ion-label>
+
+             <ion-select [(ngModel)]="myDest" multiple="false">
+                 <ion-option value="Direction du systeme d'information">Direction du systeme d'information</ion-option>
+                 <ion-option value="IUT Service Informatique">IUT Service Informatique</ion-option>
+                 <ion-option value="Service Informatique Transversale">Service Informatique Transversale</ion-option>
+                 <ion-option value="Sonel">Sonel</ion-option>
+                 <ion-option value="STU Maintenance">STU Maintenance</ion-option>
+                 <ion-option value="@ctice">@ctice</ion-option>
+             </ion-select>
+         </ion-item>
+
      </ion-card-content>
   </ion-card>
 

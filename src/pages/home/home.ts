@@ -15,7 +15,7 @@ export class HomePage {
    showToast(position: string) {
     let toast = this.toastCtrl.create({
       message: 'Choisir le destinataire',
-      duration: 3000,
+      duration: 2000,
       position: position
     });
 
