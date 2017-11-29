@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let item of listDT">
+  <ion-card *ngFor="let item of Statut">
     <ion-card-header>
-      DT #{{item.numero}} {{item.nom}} {{item.date}} <ion-img src="{{Statut.Stat}}"></ion-img>
+      DT #{{item.numero}} {{item.nom}} {{item.date}} <ion-img src="{{item.Stat}}"></ion-img>
 
     </ion-card-header>
     <ion-card-content>

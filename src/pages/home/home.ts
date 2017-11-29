@@ -8,7 +8,7 @@ import { DestinatairePage } from "../destinataire/destinataire";
   templateUrl: 'home.html'
 })
 export class HomePage {
-    Statut: Array<{Stat: string}>;
+    Statut: Array<{numero: string, nom: string, date: string, destinataire:string, descriptif: string,Stat: string}>;
     listDT:Array<{numero: string, nom: string, date: string, destinataire:string, descriptif: string, statut: string}>;
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
     this.listDT= [
@@ -137,17 +137,32 @@ export class HomePage {
   for (let i = 0; i < this.listDT.length; i++) {
     if(this.listDT[i].statut == "Terminer"){
       this.Statut.push({
-      Stat:"assets/imgs/rond-vert.png"
+        numero: this.listDT[i].numero,
+        nom: this.listDT[i].nom,
+        date: this.listDT[i].date,
+        destinataire: this.listDT[i].destinataire,
+        descriptif: this.listDT[i].descriptif,
+        Stat:"assets/imgs/rond-vert.png"
       });
     }else{
       if(this.listDT[i].statut =="En cours"){
              this.Statut.push({
+        numero: this.listDT[i].numero,
+        nom: this.listDT[i].nom,
+        date: this.listDT[i].date,
+        destinataire: this.listDT[i].destinataire,
+        descriptif: this.listDT[i].descriptif,
       Stat:"assets/imgs/rond-orange.png"
       });
       }
       else{
             this.Statut.push({
-             Stat:"assets/imgs/rond-rouge.png"
+        numero: this.listDT[i].numero,
+        nom: this.listDT[i].nom,
+        date: this.listDT[i].date,
+        destinataire: this.listDT[i].destinataire,
+        descriptif: this.listDT[i].descriptif,
+        Stat:"assets/imgs/rond-rouge.png"
             });
           }
     }
