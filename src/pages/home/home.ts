@@ -8,8 +8,8 @@ import { DestinatairePage } from "../destinataire/destinataire";
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-    listDT:Array<{numero: string, nom: string, date: string, destinataire:string, descriptif: string}>;
+  listDT:Array<{numero: string, nom: string, date: string, destinataire:string, descriptif: string}>;
+  
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
     this.listDT= [
       {
