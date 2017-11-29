@@ -8,13 +8,14 @@ import { ToastController } from 'ionic-angular';
   templateUrl: 'destinataire.html',
 })
 export class DestinatairePage {
-ListDestinataire:Array<{destinataire: string}>;
+  ListDestinataire:Array<{destinataire: string}>;
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
 
     this.ListDestinataire = [
       {
-        destinataire: "Direction du systeme d information",
+
+        destinataire: "Direction du systeme d'information",
       },
       {
         destinataire: "IUT Service Informatique",
@@ -35,6 +36,7 @@ ListDestinataire:Array<{destinataire: string}>;
 
 
   }
+
   //Toast pour la prochaine page
   showToast(position: string) {
     let toast = this.toastCtrl.create({
@@ -42,10 +44,10 @@ ListDestinataire:Array<{destinataire: string}>;
       duration: 2000,
       position: position
     });
-
     toast.present(toast);
   }
-//fonction pour le clique
+  
+  //Fonction pour le clic
   OpenCat(){
     this.navCtrl.push(CategoriesPage);
     this.showToast('down');
