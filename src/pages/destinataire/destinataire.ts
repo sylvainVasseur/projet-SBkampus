@@ -32,6 +32,11 @@ export class DestinatairePage {
         destinataire: "@ctice",
       }
     ];
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ad82cb04c57e040828f623853478cff43a796cd2
   }
 
   //Toast pour la prochaine page
