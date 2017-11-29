@@ -13,6 +13,7 @@ export class DescriptifPage {
 
   }
 
+  //Fonction pour le clic
   OpenLoc(){
       this.navCtrl.push(LocalisationPage);
   }

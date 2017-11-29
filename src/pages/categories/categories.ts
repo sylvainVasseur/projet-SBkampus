@@ -8,19 +8,40 @@ import { ToastController } from 'ionic-angular';
   templateUrl: 'categories.html',
 })
 export class CategoriesPage {
+  ListCategories:Array<{categorie: string}>;
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
-
+    this.ListCategories = [
+      {
+        "categorie": "Compte utilisateur",
+      },
+      {
+        "categorie": "Matériels",
+      },
+      {
+        "categorie": "Logiciels",
+      },
+      {
+        "categorie": "ENT",
+      },
+      {
+        "categorie": "Sécurité",
+      }
+    ];
   }
-showToast(position: string) {
-    let toast = this.toastCtrl.create({
-      message: 'Remplir le descriptif',
-      duration: 2000,
-      position: position
-    });
 
-    toast.present(toast);
+  //Toast pour la prochaine page
+  showToast(position: string) {
+      let toast = this.toastCtrl.create({
+        message: 'Remplir le descriptif',
+        duration: 2000,
+        position: position
+      });
+
+      toast.present(toast);
   }
+
+  //Fonction pour le clic
   OpenDesc(){
       this.navCtrl.push(DescriptifPage);
           this.showToast('down');
