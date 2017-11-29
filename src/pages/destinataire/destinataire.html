@@ -1,9 +1,9 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>SBKampus</ion-title>
-  </ion-navbar>
+<ion-navbar>
+<ion-title>SBKampus</ion-title>
+</ion-navbar>
 
 </ion-header>
 
@@ -12,24 +12,21 @@
 
   <ion-card>
     <ion-card-header>
-      Destinataire:
+    Destinataire:
     </ion-card-header>
     <ion-card-content>
-
-         <ion-item>
-          <ion-label>Destinataire</ion-label>
-
-             <ion-select [(ngModel)]="myDest" multiple="false">
-                 <ion-option value="Direction du systeme d'information">Direction du systeme d'information</ion-option>
-                 <ion-option value="IUT Service Informatique">IUT Service Informatique</ion-option>
-                 <ion-option value="Service Informatique Transversale">Service Informatique Transversale</ion-option>
-                 <ion-option value="Sonel">Sonel</ion-option>
-                 <ion-option value="STU Maintenance">STU Maintenance</ion-option>
-                 <ion-option value="@ctice">@ctice</ion-option>
-             </ion-select>
-         </ion-item>
-
-     </ion-card-content>
+      <ion-item>
+        <ion-label>Destinataire</ion-label>
+        <ion-select [(ngModel)]="myDest" multiple="false">
+          <ion-option value="Direction du systeme d'information">Direction du systeme d'information</ion-option>
+          <ion-option value="IUT Service Informatique">IUT Service Informatique</ion-option>
+          <ion-option value="Service Informatique Transversale">Service Informatique Transversale</ion-option>
+          <ion-option value="Sonel">Sonel</ion-option>
+          <ion-option value="STU Maintenance">STU Maintenance</ion-option>
+          <ion-option value="@ctice">@ctice</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
   </ion-card>
 
   <ion-item>
@@ -38,15 +35,12 @@
   </ion-item>
 
   <ion-list>
-     <ion-input type="email" placeholder="Email"></ion-input>
+    <ion-input type="email" placeholder="Email"></ion-input>
   </ion-list>
-
 </ion-content>
 
 <ion-footer>
-  
   <button ion-button full icon-start (click)="OpenCat()">
     <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
   </button>
-     
-  </ion-footer>
+</ion-footer>

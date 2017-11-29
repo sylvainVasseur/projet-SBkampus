@@ -17,7 +17,8 @@ import { LocalisationPage } from '../pages/localisation/localisation';
     HomePage,
     DestinatairePage,
     CategoriesPage,
-    DescriptifPage
+    DescriptifPage,
+    LocalisationPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,8 @@ import { LocalisationPage } from '../pages/localisation/localisation';
     HomePage,
     DestinatairePage,
     CategoriesPage,
-    DescriptifPage
+    DescriptifPage,
+    LocalisationPage
   ],
   providers: [
     StatusBar,
