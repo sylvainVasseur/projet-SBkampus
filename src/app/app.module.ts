@@ -11,6 +11,7 @@ import { CategoriesPage } from '../pages/categories/categories';
 import { DescriptifPage } from '../pages/descriptif/descriptif';
 import { LocalisationPage } from '../pages/localisation/localisation';
 import { MediaPage } from '../pages/media/media';
+import { RecapPage } from '../pages/recap/recap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MediaPage } from '../pages/media/media';
     CategoriesPage,
     DescriptifPage,
     LocalisationPage,
-    MediaPage
+    MediaPage,
+    RecapPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { MediaPage } from '../pages/media/media';
     CategoriesPage,
     DescriptifPage,
     LocalisationPage,
-    MediaPage
+    MediaPage,
+    RecapPage
   ],
   providers: [
     StatusBar,
