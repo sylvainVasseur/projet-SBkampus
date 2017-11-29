@@ -34,6 +34,9 @@ export class DestinatairePage {
     ];
   }
 
+onChange(destinataireValeur){
+  console.log("Selection de destinataire:",destinataireValeur);
+}
   //Toast pour la prochaine page
   showToast(position: string) {
     let toast = this.toastCtrl.create({

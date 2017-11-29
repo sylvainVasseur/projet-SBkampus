@@ -13,7 +13,7 @@
     <ion-card-content>
       <ion-item>
         <ion-label>Destinataire</ion-label>
-        <ion-select multiple="false">
+        <ion-select [(ngModel)]="destinataire" #newSelect (change)="onChange(destinataire)">
           <ion-option *ngFor="let item of ListDestinataire">{{item.destinataire}}</ion-option>
         </ion-select>
       </ion-item>
