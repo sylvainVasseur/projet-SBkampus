@@ -5,19 +5,32 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
   <ion-card>
     <ion-card-header>
       Descriptif
     </ion-card-header>
     <ion-card-content>
-
+      <ion-item>
+        <ion-label stacked>Descriptif de la demande :</ion-label>
+        <ion-input type="text" placeholder="Descriptif de la demande"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Date d'intervention :</ion-label>
+        <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="event.month"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <button ion-button icon-start (click)="OpenLoca()">
+          <ion-icon ios="ios-attach" md="md-attach"></ion-icon>
+          Identifier le poste défectueux (via QRCode)
+        </button>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>
 
 <ion-footer>
-  <button ion-button full icon-start (click)="OpenLoca()">
+  <button ion-button full icon-start (click)="OpenMed()">
     <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
   </button>
 </ion-footer>

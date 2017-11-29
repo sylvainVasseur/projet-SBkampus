@@ -14,7 +14,6 @@ export class DestinatairePage {
 
     this.ListDestinataire = [
       {
-
         destinataire: "Direction du systeme d'information",
       },
       {

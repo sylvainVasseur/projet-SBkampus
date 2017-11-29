@@ -10,6 +10,7 @@ import { DestinatairePage } from '../pages/destinataire/destinataire';
 import { CategoriesPage } from '../pages/categories/categories';
 import { DescriptifPage } from '../pages/descriptif/descriptif';
 import { LocalisationPage } from '../pages/localisation/localisation';
+import { MediaPage } from '../pages/media/media';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LocalisationPage } from '../pages/localisation/localisation';
     DestinatairePage,
     CategoriesPage,
     DescriptifPage,
-    LocalisationPage
+    LocalisationPage,
+    MediaPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { LocalisationPage } from '../pages/localisation/localisation';
     DestinatairePage,
     CategoriesPage,
     DescriptifPage,
-    LocalisationPage
+    LocalisationPage,
+    MediaPage
   ],
   providers: [
     StatusBar,
