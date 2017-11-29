@@ -8,8 +8,8 @@
 
 <ion-content>
   <ion-card *ngFor="let item of listDT">
-    <ion-card-header >
-      DT #{{item.numero}} {{item.nom}} {{item.date}} <img src="assets/imgs/rond-vert.png" >
+    <ion-card-header>
+      DT #{{item.numero}} {{item.nom}} {{item.date}} <ion-img src="{{Statut.Stat}}"></ion-img>
     </ion-card-header>
     <ion-card-content>
       <p>Destinataire: {{item.destinataire}}</p> 
