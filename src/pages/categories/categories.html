@@ -14,8 +14,8 @@
     <ion-card-content>
         <ion-item>
           <ion-label>Catégories</ion-label>
-          <ion-select [(ngModel)]="myCateg" multiple="false">
-            <ion-option *ngFor="let item of categorie">{{Li[0].destinataire}}</ion-option>
+          <ion-select multiple="false">
+            <ion-option *ngFor="let item of ListCategories">{{item.categorie}}</ion-option>
           </ion-select>
         </ion-item>
       </ion-card-content>
