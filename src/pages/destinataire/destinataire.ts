@@ -14,24 +14,27 @@ ListDestinataire:Array<{destinataire: string}>;
 
     this.ListDestinataire = [
       {
-        "destinataire": "Direction du systeme d information",
+        destinataire: "Direction du systeme d information",
       },
       {
-        "destinataire": "IUT Service Informatique",
+        destinataire: "IUT Service Informatique",
       },
       {
-        "destinataire": "Service Informatique Transversale",
+        destinataire: "Service Informatique Transversale",
       },
       {
-        "destinataire": "Sonel",
+        destinataire: "Sonel",
       },
       {
-        "destinataire": "STU Maintenance",
+        destinataire: "STU Maintenance",
       },
       {
-        "destinataire": "@ctice",
+        destinataire: "@ctice",
       }
     ];
+
+
+
   }
   //Toast pour la prochaine page
   showToast(position: string) {
