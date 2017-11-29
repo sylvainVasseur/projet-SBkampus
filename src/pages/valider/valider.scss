@@ -1,0 +1,23 @@
+page-recap {
+    .card-header{
+        font-size: 1.0em;
+        font-weight: bold;
+        text-align: center;
+        background-color:#778899;
+        color:#FFFAF0;
+        margin-bottom: 10px;
+    
+    }
+    .card-header{
+        img{
+        height: 18px;
+        width: 18px;
+        }
+    }
+
+    .card-content{
+        p{
+            margin-bottom: 5px;
+        }
+    }
+}

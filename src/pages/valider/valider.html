@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>SBKampus</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let item of laDT">
+        <ion-card-header>
+            Confirmation
+        </ion-card-header>
+        <ion-card-content>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+    <button ion-button full icon-start (click)="confirmValider()">
+        <ion-icon ios="ios-return-left" md="md-return-left"></ion-icon>
+        Valider
+    </button>
+</ion-footer>

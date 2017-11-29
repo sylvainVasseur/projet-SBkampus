@@ -12,6 +12,7 @@ import { DescriptifPage } from '../pages/descriptif/descriptif';
 import { LocalisationPage } from '../pages/localisation/localisation';
 import { MediaPage } from '../pages/media/media';
 import { RecapPage } from '../pages/recap/recap';
+import { ValiderPage } from '../pages/valider/valider';
 
 @NgModule({
   declarations: [

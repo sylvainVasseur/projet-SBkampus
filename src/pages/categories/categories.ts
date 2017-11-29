@@ -28,7 +28,7 @@ export class CategoriesPage {
       },
       {
         categorie: "Logiciels",
-      },/*
+      }/*,
       {
         categorie: "ENT",
       },

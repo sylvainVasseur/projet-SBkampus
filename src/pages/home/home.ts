@@ -135,42 +135,41 @@ export class HomePage {
         statut:"En cours"
       },
     ];
+    
     this.Statut = [];
-  for (let i = 0; i < this.listDT.length; i++) {
-    if(this.listDT[i].statut == "Terminer"){
-      this.Statut.push({
+    for (let i = 0; i < this.listDT.length; i++) {
+      if(this.listDT[i].statut == "Terminer"){
+        this.Statut.push({
+          numero: this.listDT[i].numero,
+          nom: this.listDT[i].nom,
+          date: this.listDT[i].date,
+          destinataire: this.listDT[i].destinataire,
+          descriptif: this.listDT[i].descriptif,
+          Stat:"assets/imgs/rond-vert.png"
+        });
+      }
+      else if(this.listDT[i].statut =="En cours"){
+        this.Statut.push({
         numero: this.listDT[i].numero,
         nom: this.listDT[i].nom,
         date: this.listDT[i].date,
         destinataire: this.listDT[i].destinataire,
         descriptif: this.listDT[i].descriptif,
-        Stat:"assets/imgs/rond-vert.png"
-      });
-    }else{
-      if(this.listDT[i].statut =="En cours"){
-             this.Statut.push({
-        numero: this.listDT[i].numero,
-        nom: this.listDT[i].nom,
-        date: this.listDT[i].date,
-        destinataire: this.listDT[i].destinataire,
-        descriptif: this.listDT[i].descriptif,
-      Stat:"assets/imgs/rond-orange.png"
-      });
+        Stat:"assets/imgs/rond-orange.png"
+        });
       }
       else{
-            this.Statut.push({
+        this.Statut.push({
         numero: this.listDT[i].numero,
         nom: this.listDT[i].nom,
         date: this.listDT[i].date,
         destinataire: this.listDT[i].destinataire,
         descriptif: this.listDT[i].descriptif,
         Stat:"assets/imgs/rond-rouge.png"
-            });
-          }
+        });
+      }
     }
   }
-  }
-
 
   //Toast pour la prochaine page
   showToast(position: string) {

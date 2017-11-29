@@ -12,11 +12,11 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-label stacked>Descriptif de la demande :</ion-label>
-        <ion-input type="text" placeholder="Descriptif de la demande"></ion-input>
+        <ion-label floating>Descriptif de la demande</ion-label>
+        <ion-textarea type="text"></ion-textarea>
       </ion-item>
       <ion-item>
-        <ion-label stacked>Date d'intervention :</ion-label>
+        <ion-label floating>Date d'intervention</ion-label>
         <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="event.month"></ion-datetime>
       </ion-item>
     </ion-card-content>
