@@ -16,8 +16,14 @@
         <ion-input type="text" placeholder="Descriptif de la demande"></ion-input>
       </ion-item>
       <ion-item>
-          <ion-label stacked>Date d'intervention :</ion-label>
-          <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="event.month"></ion-datetime>
+        <ion-label stacked>Date d'intervention :</ion-label>
+        <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="event.month"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <button ion-button icon-start (click)="OpenLoca()">
+          <ion-icon ios="ios-attach" md="md-attach"></ion-icon>
+          Identifier le poste défectueux (via QRCode)
+        </button>
       </ion-item>
     </ion-card-content>
   </ion-card>
