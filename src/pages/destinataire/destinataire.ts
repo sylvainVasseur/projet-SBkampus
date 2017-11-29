@@ -14,7 +14,6 @@ export class DestinatairePage {
 
     this.ListDestinataire = [
       {
-
         destinataire: "Direction du systeme d'information",
       },
       {
@@ -33,9 +32,6 @@ export class DestinatairePage {
         destinataire: "@ctice",
       }
     ];
-
-
-
   }
 
   //Toast pour la prochaine page

@@ -8,24 +8,65 @@ import { ToastController } from 'ionic-angular';
   templateUrl: 'categories.html',
 })
 export class CategoriesPage {
+  //Liste principale
   ListCategories:Array<{categorie: string}>;
+
+  //Autres listes
+  ListCompteUtilisateur:Array<{useracc: string}>;
+  ListMateriels:Array<{materiels: string}>;
+  ListLogiciels:Array<{logiciels: string}>;
+  ListENT:Array<{ent: string}>;
+  ListSecurite:Array<{securite: string}>;
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
     this.ListCategories = [
       {
-        "categorie": "Compte utilisateur",
+        categorie: "Compte utilisateur",
       },
       {
-        "categorie": "Matériels",
+        categorie: "Matériels",
       },
       {
-        "categorie": "Logiciels",
+        categorie: "Logiciels",
+      },/*
+      {
+        categorie: "ENT",
       },
       {
-        "categorie": "ENT",
+        categorie: "Sécurité",
+      }*/
+    ];
+
+    this.ListCompteUtilisateur = [
+      {
+        useracc: "Mot de passe",
       },
       {
-        "categorie": "Sécurité",
+        useracc: "Restauration de fichiers",
+      },
+      {
+        useracc: "Suppression de compte",
+      }
+    ];
+
+    this.ListMateriels = [
+      {
+        materiels: "Panne"
+      },
+      {
+        materiels: "Installation"
+      },
+      {
+        materiels: "Demande de matériel"
+      }
+    ];
+
+    this.ListLogiciels = [
+      {
+        logiciels: "Installation"
+      },
+      {
+        logiciels: "Logiciels bureautique"
       }
     ];
   }

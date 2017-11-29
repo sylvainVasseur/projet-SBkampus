@@ -11,6 +11,14 @@
     <ion-card-header>
       Catégories
     </ion-card-header>
+    <ion-card-content>
+        <ion-item>
+          <ion-label>Catégories</ion-label>
+          <ion-select [(ngModel)]="myCateg" multiple="false">
+            <ion-option *ngFor="let item of categorie">{{Li[0].destinataire}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-card-content>
   </ion-card>
 </ion-content>
 
