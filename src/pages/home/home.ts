@@ -10,7 +10,6 @@ import { DestinatairePage } from "../destinataire/destinataire";
 export class HomePage {
   Statut: Array<{Stat: string}>;
   listDT:Array<{numero: string, nom: string, date: string, destinataire:string, descriptif: string, statut: string}>;
-
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
     this.listDT= [
       {
