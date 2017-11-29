@@ -29,5 +29,4 @@ export class MediaPage {
     this.navCtrl.push(RecapPage);
     this.showToast('down');
   }
-
 }

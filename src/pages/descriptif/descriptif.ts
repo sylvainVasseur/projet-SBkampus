@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LocalisationPage } from '../localisation/localisation';
-import { MediaPage } from '../media/media';
 import { ToastController } from 'ionic-angular';
 
 @Component({
@@ -20,7 +19,7 @@ export class DescriptifPage {
   }
 
   //Toast pour la localisation
-  showToastLoca(position: string) {
+  showToast(position: string) {
     let toast = this.toastCtrl.create({
     message: 'Scanner le QRCode',
       duration: 2000,
@@ -33,23 +32,6 @@ export class DescriptifPage {
   //Bouton ajout QRCode
   OpenLoca(){
     this.navCtrl.push(LocalisationPage);
-    this.showToastLoca('down');
-  }
-
-  //Toast pour la prochaine page
-  showToast(position: string) {
-    let toast = this.toastCtrl.create({
-    message: 'Ajouter une photo',
-      duration: 2000,
-      position: position
-    });
-
-    toast.present(toast);
-  }
-
-  //Fonction pour le clic
-  OpenMed(){
-      this.navCtrl.push(MediaPage);
-      this.showToast('down');
+    this.showToast('down');
   }
 }
