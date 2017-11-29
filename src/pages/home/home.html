@@ -7,63 +7,13 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      DT #1 Vasseur 15/11/17 Statut <img src="assets/imgs/rond-rouge.png" >
+  <ion-card *ngFor="let item of listDT">
+    <ion-card-header >
+      DT #{{item.numero}} {{item.nom}} {{item.date}} <img src="assets/imgs/rond-vert.png" >
     </ion-card-header>
     <ion-card-content>
-      <p>Destinataire: DSI</p> 
-      <p>Descriptif: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      DT #2 Vasseur 16/11/17  Statut <img src="assets/imgs/rond-vert.png" >
-    </ion-card-header>
-    <ion-card-content>
-      <p>Destinataire: DSI</p> 
-      <p>Descriptif: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      DT #3 Vasseur 17/11/17 Statut <img src="assets/imgs/rond-rouge.png" >
-    </ion-card-header>
-    <ion-card-content>
-      <p>Destinataire: DSI</p> 
-      <p>Descriptif: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      DT #4 Vasseur 18/11/17 Statut <img src="assets/imgs/rond-orange.png" >
-    </ion-card-header>
-    <ion-card-content>
-      <p>Destinataire: DSI</p> 
-      <p>Descriptif: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      DT #5 Vasseur 15/11/17 Statut<img src="assets/imgs/rond-vert.png" >
-    </ion-card-header>
-    <ion-card-content>
-      <p>Destinataire: DSI</p> 
-      <p>Descriptif: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      DT #6 Vasseur 16/11/17 Statut<img src="assets/imgs/rond-vert.png" > 
-    </ion-card-header>
-    <ion-card-content>
-      <p>Destinataire: DSI</p> 
-      <p>Descriptif: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
+      <p>Destinataire: {{item.destinataire}}</p> 
+      <p>Descriptif:{{item.descriptif}}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>
