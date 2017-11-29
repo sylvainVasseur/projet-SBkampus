@@ -32,7 +32,6 @@ export class DestinatairePage {
         destinataire: "@ctice",
       }
     ];
-
   }
 
   //Toast pour la prochaine page
