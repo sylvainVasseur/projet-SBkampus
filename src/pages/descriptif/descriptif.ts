@@ -13,6 +13,10 @@ export class DescriptifPage {
 
   }
 
+  public event = {
+    month: 'today'
+  }
+
   //Fonction pour le clic
   OpenLoc(){
       this.navCtrl.push(LocalisationPage);

@@ -5,13 +5,22 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
   <ion-card>
     <ion-card-header>
       Descriptif
     </ion-card-header>
     <ion-card-content>
-
+      <ion-item>
+        <ion-label stacked>Descriptif de la demande :</ion-label>
+        <ion-input type="text" placeholder="Descriptif de la demande"></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+        <ion-item>
+          <ion-label stacked>Date d'intervention :</ion-label>
+          <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>
