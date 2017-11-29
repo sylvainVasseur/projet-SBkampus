@@ -34,7 +34,6 @@ ListDestinataire:Array<{destinataire: string}>;
     ];
 
 
-
   }
   //Toast pour la prochaine page
   showToast(position: string) {

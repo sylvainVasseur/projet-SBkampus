@@ -17,13 +17,8 @@
     <ion-card-content>
       <ion-item>
         <ion-label>Destinataire</ion-label>
-        <ion-select [(ngModel)]="myDest" multiple="false">
-          <ion-option value="Direction du systeme d'information">{{ListDestinataire[0].destinataire}}</ion-option>
-          <ion-option value="IUT Service Informatique">{{ListDestinataire[1].destinataire}}</ion-option>
-          <ion-option value="Service Informatique Transversale">{{ListDestinataire[2].destinataire}}</ion-option>
-          <ion-option value="Sonel">{{ListDestinataire[3].destinataire}}</ion-option>
-          <ion-option value="STU Maintenance">{{ListDestinataire[4].destinataire}}</ion-option>
-          <ion-option value="@ctice">{{ListDestinataire[5].destinataire}}</ion-option>
+        <ion-select multiple="false">
+          <ion-option *ngFor="let item of ListDestinataire">{{item.destinataire}}</ion-option>
         </ion-select>
       </ion-item>
     </ion-card-content>
