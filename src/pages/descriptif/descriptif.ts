@@ -13,6 +13,7 @@ export class DescriptifPage {
 
   }
 
+  //Récupération de la date d'aujourd'hui
   public event = {
     month: 'today'
   }
