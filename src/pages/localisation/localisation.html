@@ -5,11 +5,16 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-item>
+    <button ion-button icon-start (click)="OpenMed()">
+        <ion-icon ios="ios-image" md="md-image"></ion-icon>
+      Identifier le poste défectueux
+    </button>
+  </ion-item>
 </ion-content>
 
 <ion-footer>
-  <button ion-button full icon-start>
+  <button ion-button full icon-start (click)="OpenRecap()">
     <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
   </button>
 </ion-footer>
