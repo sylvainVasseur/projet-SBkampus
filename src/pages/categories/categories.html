@@ -12,13 +12,27 @@
       Catégories
     </ion-card-header>
     <ion-card-content>
-        <ion-item>
-          <ion-label>Catégories</ion-label>
-          <ion-select multiple="false">
-            <ion-option *ngFor="let item of ListCategories">{{item.categorie}}</ion-option>
-          </ion-select>
-        </ion-item>
-      </ion-card-content>
+      <ion-item>
+        <ion-label>Catégories</ion-label>
+        <ion-select multiple="false">
+          <ion-option *ngFor="let item of ListCategories">{{item.categorie}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Compte Utilisateur
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Compte Utilisateur</ion-label>
+        <ion-select multiple="false">
+          <ion-option *ngFor="let item of ListCompteUtilisateur">{{item.useracc}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
   </ion-card>
 </ion-content>
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { LocalisationPage } from '../localisation/localisation';
+import { MediaPage } from '../media/media';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class DescriptifPage {
   }
 
   //Fonction pour le clic
-  OpenLoc(){
-      this.navCtrl.push(LocalisationPage);
+  OpenMed(){
+      this.navCtrl.push(MediaPage);
   }
 }
