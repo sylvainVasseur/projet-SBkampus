@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { RecapPage } from '../recap/recap';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 
 @Component({

@@ -11,16 +11,16 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <button ion-button icon-start (click)="OpenMed()">
+        <button ion-button icon-start full (click)="OpenMed()">
           <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
           Identifier le poste défectueux
         </button>
-      </ion-item>
-      <ion-item>
-        <button ion-button icon-start (click)="OpenMed()">
-          <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
-          Ajouter une photo
-        </button>
+        </ion-item>
+        <ion-item>
+            <button ion-button icon-start full (click)="takePicture()">
+              <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
+              Prendre une photo
+              </button>
       </ion-item>
     </ion-card-content>
   </ion-card>

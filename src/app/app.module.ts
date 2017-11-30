@@ -13,6 +13,7 @@ import { LocalisationPage } from '../pages/localisation/localisation';
 import { MediaPage } from '../pages/media/media';
 import { RecapPage } from '../pages/recap/recap';
 import { ValiderPage } from '../pages/valider/valider';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ValiderPage } from '../pages/valider/valider';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera
   ]
 })
 export class AppModule {}
