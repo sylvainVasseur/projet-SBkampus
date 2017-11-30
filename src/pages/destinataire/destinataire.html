@@ -19,15 +19,19 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
-
-  <ion-item>
-    <ion-label>Ajouter un Co-demandeur</ion-label>
-    <ion-checkbox checked="false"></ion-checkbox>
-  </ion-item>
-
-  <ion-list>
-    <ion-input type="email" placeholder="Email"></ion-input>
-  </ion-list>
+  
+  <ion-card>
+    <ion-card-header>
+      Ajouter un Co-demandeur
+    </ion-card-header>
+    <ion-card-content>
+      <p>(pas obligatoire)</p>
+      <ion-item>
+        
+        <ion-input type="email" placeholder="Email" (ionInput)="TextEmail(email)"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
 
 <ion-footer>

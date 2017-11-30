@@ -33,10 +33,13 @@ export class DestinatairePage {
         destinataire: "@ctice",
       }
     ];
-
+    //sconsole.log(this.email);
   }
   onChange(destinataireList){
     console.log("Choix destinataire: ",destinataireList);
+  }
+  TextEmail(email){
+    console.log(email);
   }
 
   //Toast pour la prochaine page
