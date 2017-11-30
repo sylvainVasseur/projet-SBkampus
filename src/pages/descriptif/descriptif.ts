@@ -11,7 +11,7 @@ export class DescriptifPage {
 
   dest: string; //variable de destinatairepage
   cat: string; //variable de categoriepage
-  desc: string; //variable n°1 de descriptifpage
+  desc: string=""; //variable n°1 de descriptifpage
   date: Date //variable n°2 de descriptifpage
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams) {
@@ -34,7 +34,16 @@ export class DescriptifPage {
 
   //Bouton ajout QRCode
   OpenLoca(){
+    if(this.desc == ""){
+      let toast = this.toastCtrl.create({
+      message: 'Saisir un descriptif ',
+      duration: 1000,
+      position: 'middle'
+    });
+    toast.present(toast);
+    }else{
     this.navCtrl.push(LocalisationPage,{'dest':this.dest, 'cat':this.cat, 'desc':this.desc, 'date':this.date});
     this.showToast('down');
+    }
   }
 }
