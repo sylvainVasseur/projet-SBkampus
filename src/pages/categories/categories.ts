@@ -18,8 +18,8 @@ export class CategoriesPage {
   ListLogiciels:Array<{logiciels: string}>;
   ListENT:Array<{ent: string}>;
   ListSecurite:Array<{securite: string}>;
-  dest: string; //variable de destinatairepage
-  cat: string; //variable de categoriepage
+  dest: string; //Variable de DestinatairePage
+  cat: string; //Variable de CategoriePage
 
   constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams) {
     this.ListCategories = [
@@ -72,18 +72,17 @@ export class CategoriesPage {
         logiciels: "Logiciels bureautique"
       }
     ];
-      this.dest= destiparam.get('dest');// recup de destinatairepage
-      console.log(this.dest);
-      console.log(this.cat);
-      /*while(this.cat=="")
-      {
+    this.dest= destiparam.get('dest'); //Récup de DestinatairePage
+    console.log(this.dest);
+    console.log(this.cat);
+    /*while(this.cat=="")
+    {
 
-      }*/
+    }*/
   }
+
   onChange(categorieList){
     this.cat= categorieList;
-    //console.log("Choix catégorie: ",categorieList);
-    console.log(this.cat);
   }
 
   //Toast pour la prochaine page

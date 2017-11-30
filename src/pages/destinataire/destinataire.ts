@@ -9,7 +9,7 @@ import { ToastController } from 'ionic-angular';
 })
 export class DestinatairePage {
   ListDestinataire:Array<{destinataire: string}>;
-  dest: string='';
+  dest: string=''; //Variable de DestinatairePage
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
 
@@ -33,8 +33,8 @@ export class DestinatairePage {
         destinataire: "@ctice",
       }
     ];
-    //sconsole.log(this.email);
   }
+  
   onChange(destinataireList){
     console.log("Choix destinataire: ",destinataireList);
   }

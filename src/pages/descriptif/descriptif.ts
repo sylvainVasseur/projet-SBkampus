@@ -9,14 +9,14 @@ import { ToastController } from 'ionic-angular';
 })
 export class DescriptifPage {
 
-  dest: string; //variable de destinatairepage
-  cat: string; //variable de categoriepage
-  desc: string; //variable n°1 de descriptifpage
-  date: Date //variable n°2 de descriptifpage
+  dest: string; //Variable de DestinatairePage
+  cat: string; //Variable de CategoriePage
+  desc: string; //Variable n°1 de DescriptifPage
+  date: Date //Variable n°2 de DescriptifPage
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams) {
-    this.dest= destiparam.get('dest');// recup de destinatairepage
-    this.cat= catparam.get('cat');// recup de categoriepage
+    this.dest= destiparam.get('dest'); //Récup de DestinatairePage
+    this.cat= catparam.get('cat'); //Récup de CategoriePage
     console.log(this.dest);
     console.log(this.cat);
   }
