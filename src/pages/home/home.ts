@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { DestinatairePage } from "../destinataire/destinataire";
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @Component({
   selector: 'page-home',
@@ -45,95 +46,7 @@ export class HomePage {
         destinataire:"Direction des services informatiques",
         descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
         statut:"En cours"
-      },
-      {
-        numero: "5",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"Terminer"
-      },
-      {
-        numero: "6",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Descriptif: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"Non pris en charge"
-      },
-      {
-        numero: "7",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"En cours"
-      },
-      {
-        numero: "8",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"Non pris en charge"
-      },
-      {
-        numero: "9",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"Terminer"
-      },
-      {
-        numero: "10",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"Non pris en charge"
-      },
-      {
-        numero: "11",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"Terminer"
-      },
-      {
-        numero: "12",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"Non pris en charge"
-      },
-      {
-        numero: "13",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"En cours"
-      },
-      {
-        numero: "14",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"Terminer"
-      },
-      {
-        numero: "15",
-        nom:"sylvain",
-        date: "15/12/17",
-        destinataire:"Direction des services informatiques",
-        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
-        statut:"En cours"
-      },
+      }
     ];
     
     this.Statut = [];
@@ -169,6 +82,14 @@ export class HomePage {
         });
       }
     }
+    //notification
+    //for (let j = 0; j < this.listDT.length; j++) {
+      //this.localNotifications.schedule({
+     // id: 1,
+     // title: 'Demande de Travaux ',
+    //  text: 'Notification changement de statut DT ' + this.Statut[j].numero
+    //});
+   // }
   }
 
   //Toast pour la prochaine page
