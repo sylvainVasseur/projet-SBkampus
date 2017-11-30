@@ -14,7 +14,7 @@
       <ion-item>
         <ion-label>Destinataire</ion-label>
         <ion-select #newSelect [(ngModel)]="dest" okText="Valider" cancelText="Annuler">
-          <ion-option *ngFor="let item of ListDestinataire" value="{{item.destinataire}}" (ionSelect)="onChange(item.destinataire)">{{item.destinataire}}</ion-option>
+          <ion-option *ngFor="let item of ListDestinataire" value={{item.destinataire}} (ionSelect)="onChange(item.destinataire)">{{item.destinataire}}</ion-option>
         </ion-select>
       </ion-item>
     </ion-card-content>
