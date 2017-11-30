@@ -12,16 +12,23 @@ export class RecapPage {
   cat: string; //Variable de CategoriePage
   desc: string; //Variable n°1 de DescriptifPage
   date: Date //Variable n°2 de DescriptifPage
+  mail: string;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, navParams: NavParams, destiparam: NavParams, catparam: NavParams, descparam: NavParams, dateparam: NavParams) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, navParams: NavParams, destiparam: NavParams, catparam: NavParams, descparam: NavParams, dateparam: NavParams, mailparam: NavParams) {
     this.dest= destiparam.get('dest'); //Récup de DestinatairePage
     this.cat= catparam.get('cat'); //Récup de CategoriePage
     this.desc= descparam.get('desc'); //Récup n°1 de DescriptifPage
     this.date= dateparam.get('date'); // Récup n°2 de DescriptifPage
+    this.mail= mailparam.get('mail');
     console.log(this.dest);
     console.log(this.cat);
     console.log(this.desc);
     console.log(this.date);
+
+    if (this.mail=="")
+    {
+      this.mail = "Aucun mail indiqué.";
+    }
   }
 
   confirmValider(){

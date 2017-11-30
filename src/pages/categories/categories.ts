@@ -22,7 +22,7 @@ export class CategoriesPage {
   cat: string; //variable de categoriepage
   mail: string;// var de mail
 
-  constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams,mailparam: NavParams) {
+  constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams, mailparam: NavParams) {
     this.ListCategories = [
       {
         categorie: "Compte utilisateur",
@@ -101,7 +101,7 @@ export class CategoriesPage {
 
   //Fonction pour le clic
   OpenDesc(event, item){
-      this.navCtrl.push(DescriptifPage,{'dest':this.dest, 'cat': this.cat});
+      this.navCtrl.push(DescriptifPage,{'dest':this.dest, 'cat': this.cat, 'mail':this.mail});
           this.showToast('down');
   }
 }

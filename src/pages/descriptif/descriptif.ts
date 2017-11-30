@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LocalisationPage } from '../localisation/localisation';
 import { ToastController } from 'ionic-angular';
+import { dashCaseToCamelCase } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'page-descriptif',
@@ -12,11 +13,13 @@ export class DescriptifPage {
   dest: string; //Variable de DestinatairePage
   cat: string; //Variable de CategoriePage
   desc: string; //Variable n°1 de DescriptifPage
-  date: Date //Variable n°2 de DescriptifPage
+  date: Date; //Variable n°2 de DescriptifPage
+  mail: string;
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams, mailparam: NavParams) {
     this.dest= destiparam.get('dest'); //Récup de DestinatairePage
     this.cat= catparam.get('cat'); //Récup de CategoriePage
+    this.mail= mailparam.get('mail');
     console.log(this.dest);
     console.log(this.cat);
   }
@@ -34,7 +37,7 @@ export class DescriptifPage {
 
   //Bouton ajout QRCode
   OpenLoca(){
-    this.navCtrl.push(LocalisationPage,{'dest':this.dest, 'cat':this.cat, 'desc':this.desc, 'date':this.date});
+    this.navCtrl.push(LocalisationPage,{'dest':this.dest, 'cat':this.cat, 'desc':this.desc, 'date':this.date, 'mail':this.mail});
     this.showToast('down');
   }
 }
