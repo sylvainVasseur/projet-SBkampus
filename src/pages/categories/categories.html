@@ -13,7 +13,7 @@
     <ion-card-content>
       <ion-item>
         <ion-label>Catégories</ion-label>
-        <ion-select multiple="false">
+        <ion-select #newSelect [(ngModel)]="cat" okText="Valider" cancelText="Annuler" multiple="false">
           <ion-option *ngFor="let item of ListCategories" (ionSelect)="onChange(item.categorie)">{{item.categorie}}</ion-option>
         </ion-select>
       </ion-item>

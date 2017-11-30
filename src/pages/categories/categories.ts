@@ -19,6 +19,7 @@ export class CategoriesPage {
   ListENT:Array<{ent: string}>;
   ListSecurite:Array<{securite: string}>;
   dest: string; //variable de destinatairepage
+  cat: string; //variable de categoriepage
 
   constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams) {
     this.ListCategories = [
@@ -73,9 +74,16 @@ export class CategoriesPage {
     ];
       this.dest= destiparam.get('dest');// recup de destinatairepage
       console.log(this.dest);
+      console.log(this.cat);
+      /*while(this.cat=="")
+      {
+
+      }*/
   }
   onChange(categorieList){
-    console.log("Choix catégorie: ",categorieList);
+    this.cat= categorieList;
+    //console.log("Choix catégorie: ",categorieList);
+    console.log(this.cat);
   }
 
   //Toast pour la prochaine page
@@ -90,8 +98,8 @@ export class CategoriesPage {
   }
 
   //Fonction pour le clic
-  OpenDesc(){
-      this.navCtrl.push(DescriptifPage);
+  OpenDesc(event, item){
+      this.navCtrl.push(DescriptifPage,{'dest':this.dest, 'cat': this.cat});
           this.showToast('down');
   }
 }

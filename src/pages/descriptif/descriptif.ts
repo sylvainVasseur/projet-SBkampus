@@ -9,13 +9,16 @@ import { ToastController } from 'ionic-angular';
 })
 export class DescriptifPage {
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
+  dest: string; //variable de destinatairepage
+  cat: string; //variable de categoriepage
+  desc: string; //variable n°1 de descriptifpage
+  date: Date //variable n°2 de descriptifpage
 
-  }
-
-  //Récupération de la date d'aujourd'hui
-  public event = {
-    month: 'today'
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams) {
+    this.dest= destiparam.get('dest');// recup de destinatairepage
+    this.cat= catparam.get('cat');// recup de categoriepage
+    console.log(this.dest);
+    console.log(this.cat);
   }
 
   //Toast pour la localisation
@@ -31,7 +34,7 @@ export class DescriptifPage {
 
   //Bouton ajout QRCode
   OpenLoca(){
-    this.navCtrl.push(LocalisationPage);
+    this.navCtrl.push(LocalisationPage,{'dest':this.dest, 'cat':this.cat, 'desc':this.desc, 'date':this.date});
     this.showToast('down');
   }
 }

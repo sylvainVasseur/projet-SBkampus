@@ -8,10 +8,20 @@ import { HomePage } from '../home/home';
   templateUrl: 'recap.html',
 })
 export class RecapPage {
-  selectedItem: any;
+  dest: string; //variable de destinatairepage
+  cat: string; //variable de categoriepage
+  desc: string; //variable n°1 de descriptifpage
+  date: Date //variable n°2 de descriptifpage
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, navParams: NavParams) {
-    this.selectedItem = navParams.get("destinataire");
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, navParams: NavParams, destiparam: NavParams, catparam: NavParams, descparam: NavParams, dateparam: NavParams) {
+    this.dest= destiparam.get('dest');// recup de destinatairepage
+    this.cat= catparam.get('cat');// recup de categoriepage
+    this.desc= descparam.get('desc');// recup n°1 de descriptifpage
+    this.date= dateparam.get('date');// recup n°2 de descriptifpage
+    console.log(this.dest);
+    console.log(this.cat);
+    console.log(this.desc);
+    console.log(this.date);
   }
 
   confirmValider(){

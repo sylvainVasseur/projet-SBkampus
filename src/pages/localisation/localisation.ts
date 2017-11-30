@@ -10,8 +10,20 @@ import { ToastController } from 'ionic-angular';
 })
 export class LocalisationPage {
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
+  dest: string; //variable de destinatairepage
+  cat: string; //variable de categoriepage
+  desc: string; //variable n°1 de descriptifpage
+  date: Date //variable n°2 de descriptifpage
 
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams, descparam: NavParams, dateparam: NavParams) {
+    this.dest= destiparam.get('dest');// recup de destinatairepage
+    this.cat= catparam.get('cat');// recup de categoriepage
+    this.desc= descparam.get('desc');// recup n°1 de descriptifpage
+    this.date= dateparam.get('date');// recup n°2 de descriptifpage
+    console.log(this.dest);
+    console.log(this.cat);
+    console.log(this.desc);
+    console.log(this.date);
   }
 
   //Toast pour l'ajout de photo
@@ -43,7 +55,7 @@ export class LocalisationPage {
   
   //Fonction pour le clic
   OpenRecap(){
-    this.navCtrl.push(RecapPage);
+    this.navCtrl.push(RecapPage,{'dest':this.dest, 'cat':this.cat, 'desc':this.desc, 'date':this.date});
     this.showToast('down');
   }
 
