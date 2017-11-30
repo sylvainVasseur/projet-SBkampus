@@ -17,18 +17,19 @@ export class RecapPage {
   confirmValider(){
     let confirm = this.alertCtrl.create({
       title: 'Êtes-vous sûr ?',
-      message: 'Un faux signalement de DT peut amener des sanctions.',
+      message: 'Un faux signalement de DT peut entrainer des sanctions.',
       buttons: [
         {
           text: 'Oui',
           handler: () => {
-            console.log('Disagree clicked');
+            this.navCtrl.push(HomePage);
+            console.log('agree clicked');
           }
         },
         {
           text: 'Non',
           handler: () => {
-            console.log('Agree clicked');
+            console.log('disAgree clicked');
           }
         }
       ]
@@ -45,12 +46,13 @@ export class RecapPage {
           text: 'Oui',
           handler: () => {
             this.navCtrl.push(HomePage);
+            console.log('disAgree clicked');
           }
         },
         {
           text: 'Non',
           handler: () => {
-            console.log('Agree clicked');
+            console.log('disAgree clicked');
           }
         }
       ]
