@@ -5,12 +5,25 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <button ion-button icon-start (click)="OpenMed()">
-        <ion-icon ios="ios-image" md="md-image"></ion-icon>
-      Identifier le poste défectueux
-    </button>
-  </ion-item>
+  <ion-card>
+    <ion-card-header>
+      Localisation
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <button ion-button icon-start (click)="OpenMed()">
+          <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
+          Identifier le poste défectueux
+        </button>
+      </ion-item>
+      <ion-item>
+        <button ion-button icon-start (click)="OpenMed()">
+          <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
+          Ajouter une photo
+        </button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
 
 <ion-footer>

@@ -30,13 +30,13 @@ export class CategoriesPage {
       },
       {
         categorie: "Logiciels",
-      }/*,
+      },
       {
         categorie: "ENT",
       },
       {
         categorie: "Sécurité",
-      }*/
+      }
     ];
 
     this.ListCompteUtilisateur = [
@@ -74,6 +74,9 @@ export class CategoriesPage {
       this.dest= destiparam.get('dest');// recup de destinatairepage
       console.log(this.dest);
   }
+  onChange(categorieList){
+    console.log("Choix catégorie: ",categorieList);
+  }
 
   //Toast pour la prochaine page
   showToast(position: string) {
@@ -91,5 +94,4 @@ export class CategoriesPage {
       this.navCtrl.push(DescriptifPage);
           this.showToast('down');
   }
-
 }
