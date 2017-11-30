@@ -44,7 +44,7 @@ export class DestinatairePage {
   showToast(position: string) {
     let toast = this.toastCtrl.create({
       message: 'Choisir la catégorie',
-      duration: 2000,
+      duration: 1000,
       position: position
     });
     toast.present(toast);
@@ -52,8 +52,19 @@ export class DestinatairePage {
   
   //Fonction pour le clic
   OpenCat(event, item){
+    if(this.dest==""){
+
+    let toast = this.toastCtrl.create({
+      message: 'Choix d un destinataire obligatoire',
+      duration: 2000,
+      position: 'middle'
+    });
+    toast.present(toast);
+  }
+  else{
     this.navCtrl.push(CategoriesPage,{'dest':this.dest, 'mail':this.mail});//envoi vers catégorie
     this.showToast('down');
+  }
   }
 
 }

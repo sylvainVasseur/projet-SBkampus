@@ -92,7 +92,7 @@ export class CategoriesPage {
   showToast(position: string) {
       let toast = this.toastCtrl.create({
         message: 'Remplir le descriptif',
-        duration: 2000,
+        duration: 1000,
         position: position
       });
 
