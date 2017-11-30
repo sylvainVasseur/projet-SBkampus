@@ -7,13 +7,34 @@
 <ion-content padding>
     <ion-card>
         <ion-card-header>
-            Récapitulatif
+            Destinataire
         </ion-card-header>
         <ion-card-content>
-            <p>Destinataire: </p>
-            <p>Descriptif: </p>
-            <p>Date: </p>
-            <p>Catégorie: </p>
+            {{this.dest}}
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Catégorie
+        </ion-card-header>
+        <ion-card-content>
+            {{this.cat}}
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+                Descriptif
+        </ion-card-header>
+        <ion-card-content>
+            {{this.desc}}
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Date
+        </ion-card-header>
+        <ion-card-content>
+            {{this.date}}
         </ion-card-content>
     </ion-card>
 </ion-content>
