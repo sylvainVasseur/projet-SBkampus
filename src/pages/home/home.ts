@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { DestinatairePage } from "../destinataire/destinataire";
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @Component({
   selector: 'page-home',
@@ -12,7 +13,7 @@ export class HomePage {
     Statut: Array<{numero: string, nom: string, date: string, destinataire:string, descriptif: string,Stat: string}>;
     listDT:Array<{numero: string, nom: string, date: string, destinataire:string, descriptif: string, statut: string}>;
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, private localNotifications: LocalNotifications) {
     this.listDT= [
       {
         numero: "1",
@@ -81,6 +82,14 @@ export class HomePage {
         });
       }
     }
+    //notification
+    //for (let j = 0; j < this.listDT.length; j++) {
+      //this.localNotifications.schedule({
+     // id: 1,
+     // title: 'Demande de Travaux ',
+    //  text: 'Notification changement de statut DT ' + this.Statut[j].numero
+    //});
+   // }
   }
 
   //Toast pour la prochaine page
