@@ -9,6 +9,7 @@ import { ToastController } from 'ionic-angular';
 })
 export class DestinatairePage {
   ListDestinataire:Array<{destinataire: string}>;
+  dest: string='';
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
 
@@ -49,8 +50,8 @@ onChange(destinataireList){
   }
   
   //Fonction pour le clic
-  OpenCat(){
-    this.navCtrl.push(CategoriesPage);
+  OpenCat(event, item){
+    this.navCtrl.push(CategoriesPage,{'dest':this.dest});//envoi vers catégorie
     this.showToast('down');
   }
 

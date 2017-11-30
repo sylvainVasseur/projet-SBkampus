@@ -11,14 +11,16 @@ export class CategoriesPage {
   //Liste principale
   ListCategories:Array<{categorie: string}>;
 
+
   //Autres listes
   ListCompteUtilisateur:Array<{useracc: string}>;
   ListMateriels:Array<{materiels: string}>;
   ListLogiciels:Array<{logiciels: string}>;
   ListENT:Array<{ent: string}>;
   ListSecurite:Array<{securite: string}>;
+  dest: string; //variable de destinatairepage
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams) {
     this.ListCategories = [
       {
         categorie: "Compte utilisateur",
@@ -69,6 +71,8 @@ export class CategoriesPage {
         logiciels: "Logiciels bureautique"
       }
     ];
+      this.dest= destiparam.get('dest');// recup de destinatairepage
+      console.log(this.dest);
   }
 
   //Toast pour la prochaine page
