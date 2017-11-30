@@ -81,12 +81,11 @@ export class CategoriesPage {
       /*while(this.cat=="")
       {
 
-      }*/
+    }*/
   }
+
   onChange(categorieList){
     this.cat= categorieList;
-    //console.log("Choix catégorie: ",categorieList);
-    console.log(this.cat);
   }
 
   //Toast pour la prochaine page

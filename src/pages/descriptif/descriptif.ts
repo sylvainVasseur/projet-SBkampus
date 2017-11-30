@@ -14,9 +14,10 @@ export class DescriptifPage {
   desc: string=""; //variable n°1 de descriptifpage
   date: Date //variable n°2 de descriptifpage
 
+
   constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams) {
-    this.dest= destiparam.get('dest');// recup de destinatairepage
-    this.cat= catparam.get('cat');// recup de categoriepage
+    this.dest= destiparam.get('dest'); //Récup de DestinatairePage
+    this.cat= catparam.get('cat'); //Récup de CategoriePage
     console.log(this.dest);
     console.log(this.cat);
   }

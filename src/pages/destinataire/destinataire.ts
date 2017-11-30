@@ -34,8 +34,8 @@ export class DestinatairePage {
         destinataire: "@ctice",
       }
     ];
-    //sconsole.log(this.email);
   }
+  
   onChange(destinataireList){
     console.log("Choix destinataire: ",destinataireList);
   }
