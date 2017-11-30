@@ -32,11 +32,12 @@ export class DestinatairePage {
         destinataire: "@ctice",
       }
     ];
-  }
 
-onChange(destinataireValeur){
-  console.log("Selection de destinataire:",destinataireValeur);
+  }
+onChange(destinataireList){
+  console.log("choix destinataire: ",destinataireList);
 }
+
   //Toast pour la prochaine page
   showToast(position: string) {
     let toast = this.toastCtrl.create({
