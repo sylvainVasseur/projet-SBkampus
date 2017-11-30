@@ -34,9 +34,9 @@ export class DestinatairePage {
     ];
 
   }
-onChange(destinataireList){
-  console.log("choix destinataire: ",destinataireList);
-}
+  onChange(destinataireList){
+    console.log("Choix destinataire: ",destinataireList);
+  }
 
   //Toast pour la prochaine page
   showToast(position: string) {

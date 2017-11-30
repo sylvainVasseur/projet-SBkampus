@@ -28,13 +28,13 @@ export class CategoriesPage {
       },
       {
         categorie: "Logiciels",
-      }/*,
+      },
       {
         categorie: "ENT",
       },
       {
         categorie: "Sécurité",
-      }*/
+      }
     ];
 
     this.ListCompteUtilisateur = [
@@ -70,6 +70,9 @@ export class CategoriesPage {
       }
     ];
   }
+  onChange(categorieList){
+    console.log("Choix catégorie: ",categorieList);
+  }
 
   //Toast pour la prochaine page
   showToast(position: string) {
@@ -87,5 +90,4 @@ export class CategoriesPage {
       this.navCtrl.push(DescriptifPage);
           this.showToast('down');
   }
-
 }
