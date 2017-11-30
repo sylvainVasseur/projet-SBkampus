@@ -9,8 +9,8 @@ import { ToastController } from 'ionic-angular';
 })
 export class DestinatairePage {
   ListDestinataire:Array<{destinataire: string}>;
-  dest: string='';
-  mail: string='';
+  dest: string="";
+  mail: string="";
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
 
