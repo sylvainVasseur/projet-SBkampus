@@ -9,7 +9,8 @@ import { ToastController } from 'ionic-angular';
 })
 export class DestinatairePage {
   ListDestinataire:Array<{destinataire: string}>;
-  dest: string=''; //Variable de DestinatairePage
+  dest: string='';
+  mail: string='';
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
 
@@ -38,9 +39,6 @@ export class DestinatairePage {
   onChange(destinataireList){
     console.log("Choix destinataire: ",destinataireList);
   }
-  TextEmail(email){
-    console.log(email);
-  }
 
   //Toast pour la prochaine page
   showToast(position: string) {
@@ -54,7 +52,7 @@ export class DestinatairePage {
   
   //Fonction pour le clic
   OpenCat(event, item){
-    this.navCtrl.push(CategoriesPage,{'dest':this.dest});//envoi vers catégorie
+    this.navCtrl.push(CategoriesPage,{'dest':this.dest, 'mail':this.mail});//envoi vers catégorie
     this.showToast('down');
   }
 

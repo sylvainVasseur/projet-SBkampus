@@ -18,10 +18,11 @@ export class CategoriesPage {
   ListLogiciels:Array<{logiciels: string}>;
   ListENT:Array<{ent: string}>;
   ListSecurite:Array<{securite: string}>;
-  dest: string; //Variable de DestinatairePage
-  cat: string; //Variable de CategoriePage
+  dest: string; //variable de destinatairepage
+  cat: string; //variable de categoriepage
+  mail: string;// var de mail
 
-  constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams) {
+  constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams,mailparam: NavParams) {
     this.ListCategories = [
       {
         categorie: "Compte utilisateur",
@@ -72,11 +73,13 @@ export class CategoriesPage {
         logiciels: "Logiciels bureautique"
       }
     ];
-    this.dest= destiparam.get('dest'); //Récup de DestinatairePage
-    console.log(this.dest);
-    console.log(this.cat);
-    /*while(this.cat=="")
-    {
+      this.dest= destiparam.get('dest');// recup de destinatairepage
+      console.log(this.dest);
+      console.log(this.cat);
+      this.mail= mailparam.get('mail');
+            console.log(this.mail);
+      /*while(this.cat=="")
+      {
 
     }*/
   }
