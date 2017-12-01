@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CategoriesPage } from '../categories/categories';
 import { ToastController } from 'ionic-angular';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'page-destinataire',
@@ -52,6 +53,8 @@ export class DestinatairePage {
   
   //Fonction pour le clic
   OpenCat(event, item){
+    //let reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //let result = reg.test(control.value);
     if(this.dest==""){
 
     let toast = this.toastCtrl.create({
@@ -60,11 +63,19 @@ export class DestinatairePage {
       position: 'middle'
     });
     toast.present(toast);
-  }
-  else{
-    this.navCtrl.push(CategoriesPage,{'dest':this.dest, 'mail':this.mail});//envoi vers catégorie
-    this.showToast('down');
-  }
+    }
+    /*else if(this.mail!="" && !result)
+    {
+      let toast2 = this.toastCtrl.create({
+        message: 'Adresse mail invalide',
+        duration: 2000,
+        position: 'middle'
+    });
+    }*/
+    else{
+      this.navCtrl.push(CategoriesPage,{'dest':this.dest, 'mail':this.mail});//envoi vers catégorie
+      this.showToast('down');
+    }
   }
 
 }
