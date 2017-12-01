@@ -10,6 +10,8 @@ import { HomePage } from '../home/home';
 export class RecapPage {
   dest: string; //Variable de DestinatairePage
   cat: string; //Variable de CategoriePage
+  cat2: string;
+  cat3: string;
   desc: string; //Variable n°1 de DescriptifPage
   date: Date //Variable n°2 de DescriptifPage
   mail: string;
@@ -17,6 +19,8 @@ export class RecapPage {
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, navParams: NavParams, destiparam: NavParams, catparam: NavParams, descparam: NavParams, dateparam: NavParams, mailparam: NavParams) {
     this.dest= destiparam.get('dest'); //Récup de DestinatairePage
     this.cat= catparam.get('cat'); //Récup de CategoriePage
+    this.cat2= catparam.get('cat2');
+    this.cat3= catparam.get('cat3');
     this.desc= descparam.get('desc'); //Récup n°1 de DescriptifPage
     this.date= dateparam.get('date'); // Récup n°2 de DescriptifPage
     this.mail= mailparam.get('mail');

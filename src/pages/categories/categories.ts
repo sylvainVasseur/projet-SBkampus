@@ -10,28 +10,29 @@ import { ToastController } from 'ionic-angular';
 export class CategoriesPage {
   //Liste principale
   ListCategories:Array<{categorie: string}>;
-
-
   //Autres listes
-  ListCompteUtilisateur:Array<{useracc: string}>;
-  ListMateriels:Array<{materiels: string}>;
-  ListLogiciels:Array<{logiciels: string}>;
-  ListENT:Array<{ent: string}>;
-  ListSecurite:Array<{securite: string}>;
+  ListMateriel:Array<{categorie: string}>;
+  ListPanne:Array<{categorie: string}>;
+
   dest: string; //variable de destinatairepage
-  cat: string; //variable de categoriepage
+  cat: string=""; //variable de categoriepage
+  cat2: string="";
+  cat3: string="";
   mail: string;// var de mail
 
-  constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams, mailparam: NavParams) {
+  Liste2: Array<any>;
+  Liste3: Array<any>;
+
+  constructor(public navCtrl: NavController,public navParams: NavParams, public toastCtrl: ToastController, destiparam: NavParams, mailparam: NavParams, listeparam: NavParams) {
     this.ListCategories = [
-      {
-        categorie: "Compte utilisateur",
-      },
       {
         categorie: "Matériels",
       },
       {
         categorie: "Logiciels",
+      },
+      {
+        categorie: "Compte utilisateur",
       },
       {
         categorie: "ENT",
@@ -41,51 +42,69 @@ export class CategoriesPage {
       }
     ];
 
-    this.ListCompteUtilisateur = [
+    this.ListMateriel = [
       {
-        useracc: "Mot de passe",
+        categorie: "Demande de devis",
       },
       {
-        useracc: "Restauration de fichiers",
+        categorie: "Deamnde de matériel",
       },
       {
-        useracc: "Suppression de compte",
+        categorie: "Destockage",
+      },
+      {
+        categorie: "Installation",
+      },
+      {
+        categorie: "Panne",
       }
     ];
 
-    this.ListMateriels = [
+    this.ListPanne = [
       {
-        materiels: "Panne"
+        categorie: "Vidéoprojecteur"
       },
       {
-        materiels: "Installation"
+        categorie: "Écrans"
       },
       {
-        materiels: "Demande de matériel"
-      }
-    ];
-
-    this.ListLogiciels = [
-      {
-        logiciels: "Installation"
+        categorie: "Imprimante"
       },
       {
-        logiciels: "Logiciels bureautique"
+        categorie: "Ordinateur fixe"
+      },
+      {
+        categorie: "Ordinateur portable"
       }
     ];
       this.dest= destiparam.get('dest');// recup de destinatairepage
-      console.log(this.dest);
-      console.log(this.cat);
       this.mail= mailparam.get('mail');
-            console.log(this.mail);
-      /*while(this.cat=="")
-      {
-
-    }*/
+      console.log(this.dest);
+      console.log(this.cat);      
+      console.log(this.mail);
   }
 
   onChange(categorieList){
     this.cat= categorieList;
+    /*if (this.cat=="Compte Utilisateur")
+    {
+      for (let i = 0; i < this.ListCompteUtilisateur.length; i++)
+      this.Liste2.push({
+        categorie: this.ListCompteUtilisateur[i]
+      });
+      this.navCtrl.push(CategoriesPage, {
+        'liste':this.Liste2,
+      })
+    }
+    else if (this.cat=="Matériel")
+    {
+      for (let i = 0; i < this.ListMateriels.length; i++)
+      this.Liste2.push({
+        categorie: this.ListMateriels[i]
+      });
+    }
+    console.log(this.Liste2);*/
+    console.log(this.cat);
   }
 
   //Toast pour la prochaine page
@@ -101,7 +120,18 @@ export class CategoriesPage {
 
   //Fonction pour le clic
   OpenDesc(event, item){
-      this.navCtrl.push(DescriptifPage,{'dest':this.dest, 'cat': this.cat, 'mail':this.mail});
-          this.showToast('down');
+    if(this.cat == "" || this.cat2 == "" || this.cat3 == ""){
+      let toast = this.toastCtrl.create({
+      message: 'Saisir une catégorie',
+      duration: 1000,
+      position: 'middle'
+    });
+    toast.present(toast);
+    }
+    else
+    {
+      this.navCtrl.push(DescriptifPage,{'dest':this.dest, 'cat': this.cat, 'cat2': this.cat2, 'cat3': this.cat3, 'mail':this.mail});
+      this.showToast('down');
+    }
   }
 }
