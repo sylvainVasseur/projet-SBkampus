@@ -47,7 +47,7 @@ export class CategoriesPage {
         categorie: "Demande de devis",
       },
       {
-        categorie: "Deamnde de matériel",
+        categorie: "Deamande de matériel",
       },
       {
         categorie: "Destockage",

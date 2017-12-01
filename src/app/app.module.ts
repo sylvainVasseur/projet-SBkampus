@@ -14,6 +14,7 @@ import { MediaPage } from '../pages/media/media';
 import { RecapPage } from '../pages/recap/recap';
 import { ValiderPage } from '../pages/valider/valider';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { QRScanner } from "@ionic-native/qr-scanner";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Camera
+    Camera,
+    QRScanner
   ]
 })
 export class AppModule {}
