@@ -4,6 +4,8 @@ import { MediaPage } from '../media/media';
 import { RecapPage } from '../recap/recap';
 import { ToastController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
+
 
 @Component({
   selector: 'page-localisation',
@@ -21,7 +23,7 @@ export class LocalisationPage {
   
   public base64Image: string;
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams, descparam: NavParams, dateparam: NavParams, mailparam: NavParams, private camera: Camera) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, destiparam: NavParams, catparam: NavParams, descparam: NavParams, dateparam: NavParams, mailparam: NavParams, private camera: Camera, private qrScanner: QRScanner) {
     this.dest= destiparam.get('dest'); //Récup de DestinatairePage
     this.cat= catparam.get('cat'); //Récup de CategoriePage
     this.cat2= catparam.get('cat2');
@@ -34,7 +36,20 @@ export class LocalisationPage {
     console.log(this.desc);
     console.log(this.date);
   }
-  
+
+    Qrscan(){
+       // start scanning
+       let scanSub = this.qrScanner.scan().subscribe((text: string) => {
+         console.log('Scanned something', text);
+
+         this.qrScanner.hide(); // hide camera preview
+         scanSub.unsubscribe(); // stop scanning
+       });
+
+       // show camera preview
+       this.qrScanner.show();
+     } 
+
     takePicture(){
       const options: CameraOptions = {
         quality: 100,
