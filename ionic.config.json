@@ -1,6 +1,8 @@
 {
   "name": "projet-SBkampus",
-  "app_id": "",
+  "app_id": "24481e49",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

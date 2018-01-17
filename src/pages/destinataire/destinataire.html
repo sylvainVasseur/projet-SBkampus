@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Choix destinataire</ion-title>
+  </ion-navbar>
+  <ion-label>Etape 1/5</ion-label>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Destinataire
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Destinataire</ion-label>
+        <ion-select #newSelect [(ngModel)]="dest" okText="Valider" cancelText="Annuler" multiple="false">
+          <ion-option *ngFor="let item of ListDestinataire" value={{item.destinataire}} (ionSelect)="onChange(item.destinataire)">{{item.destinataire}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      Ajouter un Co-demandeur
+    </ion-card-header>
+    <ion-card-content>
+      <p>(pas obligatoire)</p>
+      <ion-item>
+        <ion-input type="email" placeholder="Email" [(ngModel)]="mail"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <button ion-button full icon-start (click)="OpenCat()">
+    <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+    Etapes 2/5
+  </button>
+</ion-footer>

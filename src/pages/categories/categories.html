@@ -1,0 +1,50 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Choix catégorie</ion-title>
+  </ion-navbar>
+  <ion-label>Etapes 2/5</ion-label>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Catégories
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Catégories</ion-label>
+        <ion-select #newSelect [(ngModel)]="cat" okText="Valider" cancelText="Annuler" (cancel)="onCancel()" multiple="false">
+          <ion-option *ngFor="let item of ListCategories" (ionSelect)="onChange(item.categorie)">{{item.categorie}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Sous-Catégories</ion-label>
+        <ion-select #newSelect [(ngModel)]="cat2" okText="Valider" cancelText="Annuler" (cancel)="onCancel()" multiple="false">
+          <ion-option *ngFor="let item of ListMateriel">{{item.categorie}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Sous-Catégories</ion-label>
+        <ion-select #newSelect [(ngModel)]="cat3" okText="Valider" cancelText="Annuler" (cancel)="onCancel()" multiple="false">
+          <ion-option *ngFor="let item of ListPanne">{{item.categorie}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <button ion-button full icon-start (click)="OpenDesc()">
+    <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+    Etapes 3/5
+  </button>
+</ion-footer>

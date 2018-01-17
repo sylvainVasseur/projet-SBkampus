@@ -1,11 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      SB-Kampus
+      Mes DT
     </ion-title>
   </ion-navbar>
+  
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  
+  <ion-card *ngFor="let item of Statut">
+    <ion-card-header>
+      DT #{{item.numero}} {{item.nom}} {{item.date}} <ion-img src="{{item.Stat}}"></ion-img>
 
+    </ion-card-header>
+    <ion-card-content>
+      <p>Destinataire: {{item.destinataire}}</p> 
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <button ion-button full icon-start (click)="OpenDest()">
+    <ion-icon name='md-add-circle' is-active="false"></ion-icon>
+    Nouvelle demande de travaux
+  </button>
+</ion-footer>

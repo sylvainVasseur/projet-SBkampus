@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Description & Date</ion-title>
+  </ion-navbar>
+  <ion-label>Etapes 3/5</ion-label>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Descriptif
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>Descriptif de la demande</ion-label>
+        <ion-textarea [(ngModel)]="desc" type="text"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Date d'intervention souhaitée</ion-label>
+        <ion-datetime [(ngModel)]="date" displayFormat="DD MMM YYYY"></ion-datetime>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <button ion-button full icon-start (click)="OpenLoca()">
+    <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+    Etapes 4/5
+  </button>
+</ion-footer>

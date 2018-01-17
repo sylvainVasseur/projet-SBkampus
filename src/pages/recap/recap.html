@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Récapitulatif</ion-title>
+    </ion-navbar>
+    <ion-label>Etapes 5/5</ion-label>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Destinataire
+        </ion-card-header>
+        <ion-card-content>
+            <p>{{this.dest}}</p>
+            <p>{{this.mail}}</p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Catégorie
+        </ion-card-header>
+        <ion-card-content>
+            <p>{{this.cat}}</p>
+            <p>{{this.cat2}}</p>
+            <p>{{this.cat3}}</p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Descriptif
+        </ion-card-header>
+        <ion-card-content>
+            {{this.desc}}
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Date
+        </ion-card-header>
+        <ion-card-content>
+            {{this.date}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+    <button ion-button full icon-start (click)="confirmValider()">
+        <ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"></ion-icon>
+        Valider
+    </button>
+    <button ion-button full icon-start (click)="confirmRetour()">
+        <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>
+        Annuler l'ajout
+    </button>
+</ion-footer>

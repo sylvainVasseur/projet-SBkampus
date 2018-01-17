@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
+import { DestinatairePage } from "../destinataire/destinataire";
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +10,102 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  Statut: Array<{numero: string, nom: string, date: string, destinataire:string,Stat: string}>;
+  listDT:Array<{numero: string, nom: string, date: string, destinataire:string, descriptif: string, statut: string}>;
 
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
+    this.listDT= [
+      {
+        numero: "1",
+        nom:"Video-projecteur",
+        date: "15/12/17",
+        destinataire:"Direction des services informatiques",
+        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
+        statut:"En cours"
+      },
+      {
+        numero: "2",
+        nom:"Ordinateur",
+        date: "15/12/17",
+        destinataire:"Direction des services informatiques",
+        descriptif:"Descriptif: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
+        statut:"Terminer"
+      },
+      {
+        numero: "3",
+        nom:"Liscence Apple",
+        date: "15/12/17",
+        destinataire:"Direction des services informatiques",
+        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
+        statut:"Non pris en charge"
+      },
+      {
+        numero: "4",
+        nom:"Unity installation",
+        date: "15/12/17",
+        destinataire:"Direction des services informatiques",
+        descriptif:"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.",
+        statut:"En cours"
+      }
+    ];
+    
+    this.Statut = [];
+    for (let i = 0; i < this.listDT.length; i++) {
+      if(this.listDT[i].statut == "Terminer"){
+        this.Statut.push({
+          numero: this.listDT[i].numero,
+          nom: this.listDT[i].nom,
+          date: this.listDT[i].date,
+          destinataire: this.listDT[i].destinataire,
+          //descriptif: this.listDT[i].descriptif,
+          Stat:"assets/imgs/rond-vert.png"
+        });
+      }
+      else if(this.listDT[i].statut =="En cours"){
+        this.Statut.push({
+        numero: this.listDT[i].numero,
+        nom: this.listDT[i].nom,
+        date: this.listDT[i].date,
+        destinataire: this.listDT[i].destinataire,
+        //descriptif: this.listDT[i].descriptif,
+        Stat:"assets/imgs/rond-orange.png"
+        });
+      }
+      else{
+        this.Statut.push({
+        numero: this.listDT[i].numero,
+        nom: this.listDT[i].nom,
+        date: this.listDT[i].date,
+        destinataire: this.listDT[i].destinataire,
+        //descriptif: this.listDT[i].descriptif,
+        Stat:"assets/imgs/rond-rouge.png"
+        });
+      }
+    }
+    //Notification
+    /*for (let j = 0; j < this.listDT.length; j++) {
+      this.localNotifications.schedule({
+      id: 1,
+      title: 'Demande de Travaux ',
+      text: 'Notification changement de statut DT ' + this.Statut[j].numero
+    });
+    }*/
   }
 
+  //Toast pour la prochaine page
+  showToast(position: string) {
+    let toast = this.toastCtrl.create({
+    message: 'Choisir le destinataire',
+    duration: 2000,
+    position: position
+    });
+
+    toast.present(toast);
+  }
+  
+  //Fonction pour le clic
+  OpenDest(){
+    this.navCtrl.push(DestinatairePage);
+    this.showToast('down');
+  }
 }

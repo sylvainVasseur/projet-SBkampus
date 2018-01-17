@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Localisation de la DT</ion-title>
+  </ion-navbar>
+  <ion-label>Etapes 4/5</ion-label>
+</ion-header>
+
+<ion-content padding>
+    <ion-label>Scanner le QR du materiel</ion-label>
+    <button ion-button icon-start full (click)="Qrscan()">
+        <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
+        Scan
+      </button>
+     <br>
+
+     <ion-label>Prendre une photo du problème</ion-label>
+      <button ion-button icon-start full (click)="takePicture()">
+          <ion-icon ios="ios-camera-outline" md="md-camera"></ion-icon>
+          Appareil photo
+          </button>
+          
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button full icon-start (click)="OpenRecap()">
+    <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+    Etapes 5/5
+  </button>
+</ion-footer>
